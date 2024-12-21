@@ -1,6 +1,7 @@
 ![REPO SIZE](https://img.shields.io/github/repo-size/DBWGLX/-OpenGL-3D-Lighting-and-Shadow-Modeling.svg)
 ![CODE SIZE](https://img.shields.io/github/languages/code-size/DBWGLX/-OpenGL-3D-Lighting-and-Shadow-Modeling.svg)
 ![License](https://img.shields.io/github/license/DBWGLX/-OpenGL-3D-Lighting-and-Shadow-Modeling.svg)
+![](https://img.shields.io/badge/%20SZU%20-8C0A41)
 
 # Final project of SZU Computer Graphics 
 
