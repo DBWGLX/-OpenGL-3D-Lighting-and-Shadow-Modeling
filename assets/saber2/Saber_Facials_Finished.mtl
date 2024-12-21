@@ -1,0 +1,228 @@
+# Blender 4.3.2 MTL File: 'Saber_Facials_Finished.blend'
+# www.blender.org
+
+newmtl mt_armorA_chestarm
+Ns 490.000000
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:/svt_0001_s01_SVT_0001_S01_chestarm.png
+map_Ks C:/svt_0001_s01_SVT_0001_S01_chestarm_s.png
+map_refl C:/svt_0001_s01_SVT_0001_S01_chestarm_s.png
+map_Bump -bm 1.000000 C:/svt_0001_s01_SVT_0001_S01_chestarm_n0.png
+
+newmtl mt_clothA_kin
+Ns 490.000000
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:/svt_0001_s01_SVT_0001_S01_clothall.png
+map_Ks C:/svt_0001_s01_SVT_0001_S01_clothall_s.png
+map_Bump -bm 1.000000 C:/svt_0001_s01_SVT_0001_S01_clothall_n0.png
+
+newmtl mt_clothA_kuro
+Ns 200.000000
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:/svt_0001_s01_SVT_0001_S01_clothall.png
+map_Ks C:/svt_0001_s01_SVT_0001_S01_clothall_s.png
+map_Bump -bm 1.000000 C:/svt_0001_s01_SVT_0001_S01_clothall_n0.png
+
+newmtl mt_clothA_mainA
+Ns 0.000000
+Ka 0.200000 0.200000 0.200000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:/svt_0001_s01_SVT_0001_S01_clothall.png
+map_Ks C:/svt_0001_s01_SVT_0001_S01_clothall_s.png
+map_refl C:/svt_0001_s01_SVT_0001_S01_clothall_s.png
+map_Bump -bm 1.000000 C:/svt_0001_s01_SVT_0001_S01_clothall_n0.png
+
+newmtl mt_clothA_mainB
+Ns 200.000000
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:/svt_0001_s01_SVT_0001_S01_clothall.png
+map_Ks C:/svt_0001_s01_SVT_0001_S01_clothall_s.png
+map_Bump -bm 1.000000 C:/svt_0001_s01_SVT_0001_S01_clothall_n0.png
+
+newmtl mt_clothA_main_siro
+Ns 200.000000
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/svt_0001_s01_SVT_0001_S01_clothall.png
+map_Ks C:/svt_0001_s01_SVT_0001_S01_clothall_s.png
+map_Bump -bm 1.000000 C:/svt_0001_s01_SVT_0001_S01_clothall_n0.png
+
+newmtl mt_clothB_main1
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 2
+map_Ks C:/svt_0001_s01_SVT_0001_S02_white_s.png
+map_d C:/svt_0001_s01__a_SVT_0001_S02_white_a.png
+map_Bump -bm 1.000000 C:/svt_0001_s01_SVT_0001_S02_white_n0.png
+
+newmtl mt_clothB_main2
+Ns 200.000000
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/svt_0001_s01_SVT_0001_S02_white.png
+map_Ks C:/svt_0001_s01_SVT_0001_S02_white_s.png
+map_Bump -bm 1.000000 C:/svt_0001_s01_SVT_0001_S02_white_n0.png
+
+newmtl mt_eye_l
+Ns 305.572357
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Ks C:/svt_0001_s01_SVT_0001_S01_eye_s.png
+map_Ke C:/svt_0001_s01_SVT_0001_S01_eye_s.png
+map_Bump -bm 1.000000 C:/svt_0001_s01_SVT_0001_S01_eye_left_n.png
+
+newmtl mt_eyehole_bs
+Ns 200.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/svt_0001_s01_SVT_0001_S01_face.png
+
+newmtl mt_face_bs
+Ns 305.572357
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.620027 0.608000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl mt_faceback
+Ns 200.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.606720 0.713411
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl mt_faceparts_bs
+Ns 200.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/svt_0001_s01_SVT_0001_S01_facebase.png
+
+newmtl mt_gold_new
+Ns 490.000000
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+illum 3
+map_Kd C:/wp_0001_t02_WP_0001_T02_sword.png
+map_Ks C:/wp_0001_t02_WP_0001_T02_sword_s.png
+map_d C:/wp_0001_t02_WP_0001_T02_sword.png
+map_Bump -bm 1.000000 C:/wp_0001_t02_WP_0001_T02_sword_n0.png
+
+newmtl mt_hairA_main1
+Ns 200.000000
+Ka 0.200000 0.200000 0.200000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:/svt_0001_s01_SVT_0001_S02_hair.png
+map_Ks C:/svt_0001_s01_SVT_0001_S02_hair_s.png
+map_Bump -bm 1.000000 C:/svt_0001_s01_SVT_0001_S02_hair_n0.png
+
+newmtl mt_oral_bs
+Ns 200.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:/svt_0001_s01_SVT_0001_S01_face.png
+
+newmtl mt_rune
+Ns 640.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+illum 3
+map_Kd C:/wp_0001_t02_WP_0001_T02_rune.png
+map_d C:/wp_0001_t02_WP_0001_T02_rune.png
+map_Bump -bm 1.000000 C:/wp_0001_t02_WP_0001_T02_rune_n0.png
+
+newmtl mt_skin
+Ns 305.572357
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.619978 0.608000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl mt_sword_Blue.001
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+illum 3
+map_Kd C:/wp_0001_t02_WP_0001_T02_sword.png
+map_Ks C:/wp_0001_t02_WP_0001_T02_sword_s.png
+map_d C:/wp_0001_t02_WP_0001_T02_sword.png
+map_Bump -bm 1.000000 C:/wp_0001_t02_WP_0001_T02_sword_n0.png
+
+newmtl mt_sword_main
+Ns 640.000000
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+illum 3
+map_Kd C:/wp_0001_t02_WP_0001_T02_sword.png
+map_Ks C:/wp_0001_t02_WP_0001_T02_sword_s.png
+map_d C:/wp_0001_t02_WP_0001_T02_sword.png
+map_Bump -bm 1.000000 C:/wp_0001_t02_WP_0001_T02_sword_n0.png
+
+newmtl 材质
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.250000 0.250000 0.250000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
