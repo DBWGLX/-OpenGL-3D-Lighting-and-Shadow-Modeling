@@ -51,10 +51,10 @@ public:
     MeshPainter();
     ~MeshPainter();
 
-    std::vector<std::string> getMeshNames();
+    std::vector<std::string>& getMeshNames();
 
-    std::vector<TriMesh *> getMeshes();
-    std::vector<openGLObject> getOpenGLObj();
+    std::vector<TriMesh *>& getMeshes();
+    std::vector<openGLObject>& getOpenGLObj();
 
 	// 读取纹理文件
     void load_texture_STBImage(const std::string &file_name, GLuint& texture);

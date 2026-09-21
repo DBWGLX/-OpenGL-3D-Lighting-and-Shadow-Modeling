@@ -6,9 +6,9 @@
 MeshPainter::MeshPainter(){};
 MeshPainter::~MeshPainter(){};
 
-std::vector<std::string> MeshPainter::getMeshNames(){ return mesh_names;};
-std::vector<TriMesh *> MeshPainter::getMeshes(){ return meshes;};
-std::vector<openGLObject> MeshPainter::getOpenGLObj(){ return opengl_objects;};
+std::vector<std::string>& MeshPainter::getMeshNames(){ return mesh_names;};
+std::vector<TriMesh *>& MeshPainter::getMeshes(){ return meshes;};
+std::vector<openGLObject>& MeshPainter::getOpenGLObj(){ return opengl_objects;};
 
 void MeshPainter::bindObjectAndData(TriMesh *mesh, openGLObject &object, const std::vector<std::string>& texture_images, const std::string &vshader, const std::string &fshader){
     // 初始化各种对象
