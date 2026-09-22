@@ -24,15 +24,6 @@ const glm::vec3 basic_colors[8] = {
 
 
 // 立方体的各个点
-//const glm::vec3 cube_vertices[8] = {
-//	glm::vec3(-0.5, -0.5, -0.5),
-//	glm::vec3(0.5, -0.5, -0.5),
-//	glm::vec3(-0.5, 0.5, -0.5),
-//	glm::vec3(0.5, 0.5, -0.5),
-//	glm::vec3(-0.5, -0.5, 0.5),
-//	glm::vec3(0.5, -0.5, 0.5),
-//	glm::vec3(-0.5, 0.5, 0.5),
-//	glm::vec3(0.5, 0.5, 0.5)};
 
 const glm::vec3 cube_vertices[8] = {
 	glm::vec3(-0.5, -0.5, -0.5),//0
@@ -327,8 +318,6 @@ void TriMesh::generateCube()
 	faces.push_back(vec3i(5, 7, 6));
 	faces.push_back(vec3i(2, 6, 7));
 	faces.push_back(vec3i(2, 7, 3));
-	//faces.push_back(vec3i(1, 5, 7));
-	//faces.push_back(vec3i(1, 7, 3));	
 	faces.push_back(vec3i(1, 7, 5));
 	faces.push_back(vec3i(1, 3, 7));
 
@@ -350,6 +339,80 @@ void TriMesh::generateCube()
 
 
 	storeFacesPoints();
+}
+
+void TriMesh::generateCube_36()
+{
+    cleanData();
+
+    const float h = 0.5f;
+
+    auto addFace = [&](const glm::vec3& p0,
+                       const glm::vec3& p1,
+                       const glm::vec3& p2,
+                       const glm::vec3& p3,
+                       const glm::vec3& n,
+                       const glm::vec3& c)
+    {
+        int base = (int)vertex_positions.size();
+
+        vertex_positions.push_back(p0);
+        vertex_positions.push_back(p1);
+        vertex_positions.push_back(p2);
+        vertex_positions.push_back(p3);
+
+        for (int i = 0; i < 4; ++i)
+        {
+            vertex_normals.push_back(n);
+            vertex_colors.push_back(c);
+        }
+
+        // 每个面独立 UV，从 0~1
+        vertex_textures.push_back(glm::vec2(0, 0));
+        vertex_textures.push_back(glm::vec2(1, 0));
+        vertex_textures.push_back(glm::vec2(1, 1));
+        vertex_textures.push_back(glm::vec2(0, 1));
+
+        // 每个面两个三角形
+        faces.push_back(vec3i(base + 0, base + 1, base + 2));
+        faces.push_back(vec3i(base + 0, base + 2, base + 3));
+    };
+
+    // 前面 +Z
+    addFace(glm::vec3(-h, -h,  h), glm::vec3( h, -h,  h),
+            glm::vec3( h,  h,  h), glm::vec3(-h,  h,  h),
+            glm::vec3(0, 0, 1), basic_colors[0]);
+
+    // 后面 -Z
+    addFace(glm::vec3( h, -h, -h), glm::vec3(-h, -h, -h),
+            glm::vec3(-h,  h, -h), glm::vec3( h,  h, -h),
+            glm::vec3(0, 0, -1), basic_colors[1]);
+
+    // 右面 +X
+    addFace(glm::vec3( h, -h,  h), glm::vec3( h, -h, -h),
+            glm::vec3( h,  h, -h), glm::vec3( h,  h,  h),
+            glm::vec3(1, 0, 0), basic_colors[2]);
+
+    // 左面 -X
+    addFace(glm::vec3(-h, -h, -h), glm::vec3(-h, -h,  h),
+            glm::vec3(-h,  h,  h), glm::vec3(-h,  h, -h),
+            glm::vec3(-1, 0, 0), basic_colors[3]);
+
+    // 上面 +Y
+    addFace(glm::vec3(-h,  h,  h), glm::vec3( h,  h,  h),
+            glm::vec3( h,  h, -h), glm::vec3(-h,  h, -h),
+            glm::vec3(0, 1, 0), basic_colors[4]);
+
+    // 下面 -Y
+    addFace(glm::vec3(-h, -h, -h), glm::vec3( h, -h, -h),
+            glm::vec3( h, -h,  h), glm::vec3(-h, -h,  h),
+            glm::vec3(0, -1, 0), basic_colors[5]);
+
+    normal_index = faces;
+    color_index = faces;
+    texture_index = faces;
+
+    storeFacesPoints();
 }
 
 void TriMesh::generateTriangle(glm::vec3 color)

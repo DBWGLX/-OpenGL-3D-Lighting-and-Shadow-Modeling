@@ -21,7 +21,6 @@ void ModelInitializer::initAll() {
     configureLight();
 
     initLightSphere();
-    //initMechanicalArmCube();
     initTable();
     initWawa();
     initSaber();
@@ -70,20 +69,6 @@ void ModelInitializer::initLightSphere() {
     meshList_.push_back(lightSphere_);
 }
 
-void ModelInitializer::initMechanicalArmCube() {
-    TriMesh* cube = new TriMesh();
-    cube->setNormalize(false);
-    cube->generateCube();
-    cube->setTranslation(glm::vec3(-3.0, 0.0, 0.0));
-    cube->setRotation(glm::vec3(0.0, 0.0, 0.0));
-    cube->setScale(glm::vec3(0.5, 0.5, 0.5));
-    cube->setAmbient(glm::vec4(0.2, 0.2, 0.2, 1.0));
-    cube->setDiffuse(glm::vec4(0.7, 0.7, 0.7, 1.0));
-    cube->setSpecular(glm::vec4(0.2, 0.2, 0.2, 1.0));
-    cube->setShininess(1.0);
-    painter_->addMesh(cube, "mechanical arm", {}, vshader_, fshader_);
-    meshList_.push_back(cube);
-}
 
 void ModelInitializer::initTable() {
     TriMesh* table = new TriMesh();
@@ -173,7 +158,7 @@ void ModelInitializer::initCow() {
 void ModelInitializer::initCube2() {
     TriMesh* cube2 = new TriMesh();
     cube2->setNormalize(true);
-    cube2->generateCube();
+    cube2->generateCube_36();
     cube2->setTranslation(glm::vec3(3, 0.3, 0));
     cube2->setRotation(glm::vec3(-90, 0, 0));
     cube2->setScale(glm::vec3(0.5, 0.5, 0.5));

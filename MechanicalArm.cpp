@@ -18,7 +18,7 @@ MechanicalArm::MechanicalArm(MeshPainter* painter,
 void MechanicalArm::init() {
     cube_ = new TriMesh();
     cube_->setNormalize(false);
-    cube_->generateCube();
+    cube_->generateCube_36();
     cube_->setTranslation(glm::vec3(-3.0f, 0.0f, 0.0f));
     cube_->setRotation(glm::vec3(0.0f));
     cube_->setScale(glm::vec3(0.5f));

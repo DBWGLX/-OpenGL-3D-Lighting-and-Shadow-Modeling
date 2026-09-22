@@ -1,4 +1,4 @@
-﻿#include "Angel.h"
+﻿#include "Angel.h" // 项目封装的 OpenGL/GLFW/GLAD 等基础头文件
 #include "TriMesh.h"
 #include "Camera.h"
 #include "MeshPainter.h"
@@ -33,7 +33,7 @@ void init() {
 
 // ========== 渲染 ==========
 void display() {
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // glClear：清除颜色缓冲和深度缓冲
 
     painter->drawMeshes(light, camera);
     arm->draw();
@@ -125,8 +125,8 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
         break;
 
     case GLFW_KEY_Z:
-        if (cursorMode) glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_NORMAL);
-        else            glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+        if (cursorMode) glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_NORMAL); // glfwSetInputMode：设置光标为正常模式
+        else            glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED); // glfwSetInputMode：隐藏并锁定光标，用于鼠标控制视角
         cursorMode ^= 1;
         break;
 
@@ -152,7 +152,7 @@ void cleanData() {
 }
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
-    glViewport(0, 0, width, height);
+    glViewport(0, 0, width, height); // glViewport：设置 OpenGL 渲染视口为窗口新尺寸
 }
 
 void mouse_callback(GLFWwindow* window, double xpos, double ypos) {
@@ -175,44 +175,43 @@ void mouse_callback(GLFWwindow* window, double xpos, double ypos) {
 }
 
 int main(int argc, char** argv) {
-    glfwInit();
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+    glfwInit(); // glfwInit：初始化 GLFW 库
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3); // glfwWindowHint：设置 OpenGL 主版本号为 3
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3); // glfwWindowHint：设置 OpenGL 次版本号为 3
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE); // glfwWindowHint：设置 OpenGL 为核心模式
 #ifdef __APPLE__
-    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
+    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE); // glfwWindowHint：macOS 下启用前向兼容
 #endif
 
     GLFWwindow* window = glfwCreateWindow(
         WINDOW_WIDTH, WINDOW_HEIGHT,
-        u8"2022150054_王雅贤_期末大作业", nullptr, nullptr);
+        u8"2022150054_王雅贤_期末大作业", nullptr, nullptr); // glfwCreateWindow：创建 GLFW 窗口和 OpenGL 上下文
     if (!window) {
         std::cout << "Failed to create GLFW window" << std::endl;
-        glfwTerminate();
+        glfwTerminate(); // glfwTerminate：终止 GLFW，释放相关资源
         return -1;
     }
-    glfwMakeContextCurrent(window);
-    glfwSetKeyCallback(window, key_callback);
-    glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
-    glfwSetCursorPosCallback(window, mouse_callback);
-    glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+    glfwMakeContextCurrent(window); // glfwMakeContextCurrent：将窗口的 OpenGL 上下文设为当前上下文
+    glfwSetKeyCallback(window, key_callback); // glfwSetKeyCallback：注册键盘按键回调
+    glfwSetFramebufferSizeCallback(window, framebuffer_size_callback); // glfwSetFramebufferSizeCallback：注册帧缓冲大小变化回调
+    glfwSetCursorPosCallback(window, mouse_callback); // glfwSetCursorPosCallback：注册鼠标位置回调
+    glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED); // glfwSetInputMode：隐藏并锁定鼠标光标
 
-    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
+    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) { // gladLoadGLLoader：加载 OpenGL 函数指针；glfwGetProcAddress：获取 GLFW 提供的函数地址
         std::cout << "Failed to initialize GLAD" << std::endl;
         return -1;
     }
 
     init();
     printHelp();
-    glEnable(GL_DEPTH_TEST);
+    glEnable(GL_DEPTH_TEST); // glEnable：启用深度测试
 
-    while (!glfwWindowShouldClose(window)) {
+    while (!glfwWindowShouldClose(window)) { // glfwWindowShouldClose：检查窗口是否收到关闭请求
         display();
-        glfwSwapBuffers(window);
-        glfwPollEvents();
+        glfwSwapBuffers(window); // glfwSwapBuffers：交换前后缓冲区，显示渲染结果
+        glfwPollEvents(); // glfwPollEvents：处理窗口和输入事件
     }
 
     cleanData();
     return 0;
 }
-

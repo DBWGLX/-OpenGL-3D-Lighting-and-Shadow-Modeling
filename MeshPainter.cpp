@@ -262,6 +262,7 @@ void MeshPainter::drawMesh(TriMesh* mesh, openGLObject &object, Light *light, Ca
 
 };
 
+//指定下标
 void MeshPainter::drawMesh(int i, glm::mat4 modelMatrix, Light* light, Camera* camera) {
 
     openGLObject& object = opengl_objects[i];
@@ -344,6 +345,7 @@ void MeshPainter::drawMesh(int i, glm::mat4 modelMatrix, Light* light, Camera* c
 
 
 void MeshPainter::drawMeshes(Light *light, Camera* camera){
+    // 0号是机械臂，单独渲染的
     for (int i = 1; i < meshes.size(); i++)
     {
         drawMesh(meshes[i], opengl_objects[i], light, camera);

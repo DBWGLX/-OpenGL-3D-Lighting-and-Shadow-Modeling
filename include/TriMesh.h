@@ -75,6 +75,7 @@ public:
 
 	// 这里添加各种形状的、模型的读取顶点的函数
 	void generateCube();
+	void generateCube_36();
 	void generateTriangle(glm::vec3 color);
 	void generateSquare(glm::vec3 color);
 
